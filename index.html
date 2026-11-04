@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmed Hossam | Software Engineer & Frontend Developer</title>
+  <meta name="description" content="Portfolio of Ahmed Hossam Sayed Mohamed - Computer Science Student at Thebes Academy, React.js Frontend Trainee at DEPI, and ECPC Competitive Programming Qualifier." />
+  <meta name="keywords" content="Ahmed Hossam, Software Engineer, React Developer, Frontend, Computer Science, Thebes Academy, DEPI, ECPC, Arduino, Embedded Systems" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%2338bdf8'>AH</text></svg>" />
+  
+  <!-- Google Fonts: Plus Jakarta Sans (English) & Cairo / Alexandria (Arabic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Tech Grid Background with Ambient Glows -->
+  <div class="tech-bg">
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+    <div class="grid-overlay"></div>
+    <div class="cross-marks-container" id="crossMarksContainer"></div>
+  </div>
+
+  <!-- Floating Island Navigation Bar -->
+  <header class="header-nav-wrapper">
+    <nav class="nav-pill" id="navbar">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-text">AHMED HOSSAM</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services" class="nav-link" data-i18n="nav_services">Services</a></li>
+        <li><a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="#certificates" class="nav-link" data-i18n="nav_certificates">Certificates</a></li>
+        <li><a href="#why-me" class="nav-link" data-i18n="nav_why_me">Why Me</a></li>
+        <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a></li>
+        <li><a href="#testimonials" class="nav-link" data-i18n="nav_testimonials">Honors</a></li>
+        <li><a href="#faq" class="nav-link" data-i18n="nav_faq">FAQ</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+
+      <!-- Action Controls: Language, Theme, CTA -->
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <div class="lang-switch-group">
+          <button type="button" class="lang-btn active" id="langEnBtn" aria-label="Switch to English">EN</button>
+          <button type="button" class="lang-btn" id="langArBtn" aria-label="Switch to Arabic">AR</button>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+
+        <!-- Let's Talk CTA Button -->
+        <a href="#contact" class="btn-talk" data-i18n="btn_talk">Let's Talk</a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button type="button" class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <span class="brand-text">AHMED HOSSAM</span>
+      <button type="button" class="close-drawer-btn" id="closeDrawerBtn" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#services" class="mobile-link" data-i18n="nav_services">Services</a></li>
+      <li><a href="#projects" class="mobile-link" data-i18n="nav_projects">Projects</a></li>
+      <li><a href="#certificates" class="mobile-link" data-i18n="nav_certificates">Certificates</a></li>
+      <li><a href="#why-me" class="mobile-link" data-i18n="nav_why_me">Why Me</a></li>
+      <li><a href="#skills" class="mobile-link" data-i18n="nav_skills">Skills</a></li>
+      <li><a href="#testimonials" class="mobile-link" data-i18n="nav_testimonials">Honors</a></li>
+      <li><a href="#faq" class="mobile-link" data-i18n="nav_faq">FAQ</a></li>
+      <li><a href="#contact" class="mobile-link" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="#contact" class="btn-talk mobile-talk-btn" data-i18n="btn_talk">Let's Talk</a>
+    </div>
+  </div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HERO SECTION (Picture 1) -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <!-- Hero Text Content -->
+        <div class="hero-content">
+          <div class="availability-badge">
+            <span class="pulse-indicator"></span>
+            <span data-i18n="hero_status">AVAILABLE FOR NEW PROJECTS & OPPORTUNITIES</span>
+          </div>
+
+          <h1 class="hero-name">AHMED HOSSAM</h1>
+          <h2 class="hero-headline" data-i18n="hero_title">
+            Building Modern Web Systems & Intelligent Software Solutions That Reflect Technical Excellence
+          </h2>
+
+          <p class="hero-subtext" data-i18n="hero_subtext">
+            Computer Science student at Thebes Academy with deep foundations in competitive programming, algorithms, and embedded systems. Currently developing advanced frontend web applications with React.js through the Digital Egypt Pioneers Initiative (DEPI).
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn-primary" data-i18n="btn_view_projects">View Projects</a>
+            <a href="#contact" class="btn-secondary" data-i18n="btn_lets_talk">Let's Talk</a>
+            <a href="resume.html" class="btn-outline" target="_blank" data-i18n="btn_download_cv">
+              <i class="fa-solid fa-file-arrow-down"></i> <span data-i18n="cv_text">Resume / CV</span>
+            </a>
+          </div>
+
+          <!-- Feature Tags -->
+          <div class="hero-tags">
+            <span class="tag-pill" data-i18n="tag_performance">Performance</span>
+            <span class="tag-pill" data-i18n="tag_react">React.js</span>
+            <span class="tag-pill" data-i18n="tag_algorithms">Algorithms (DSA)</span>
+            <span class="tag-pill" data-i18n="tag_oop">OOP & C++</span>
+            <span class="tag-pill" data-i18n="tag_responsive">Responsive</span>
+            <span class="tag-pill" data-i18n="tag_embedded">Embedded IoT</span>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase with Real Photo & Floating Badges -->
+        <div class="hero-visual">
+          <div class="portrait-glass-card">
+            <!-- Ambient Glowing Core -->
+            <div class="card-glow-core"></div>
+            
+            <!-- Real Photo of Ahmed Hossam -->
+            <div class="portrait-frame">
+              <img src="ahmed-hossam.png" alt="Ahmed Hossam Sayed" class="portrait-img" id="heroPhoto" />
+              <div class="portrait-overlay"></div>
+            </div>
+
+            <!-- Floating High-Tech Achievement Badges -->
+            <div class="floating-badge badge-top-right">
+              <div class="badge-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="badge-text">
+                <span class="badge-label" data-i18n="badge_thebes_title">Thebes Academy</span>
+                <span class="badge-desc" data-i18n="badge_thebes_sub">CS 3rd Year • GPA 3.0+</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-mid-left">
+              <div class="badge-icon"><i class="fa-solid fa-trophy"></i></div>
+              <div class="badge-text">
+                <span class="badge-label" data-i18n="badge_ecpc_title">ECPC 2026 Qualifier</span>
+                <span class="badge-desc" data-i18n="badge_ecpc_sub">Algorithmic Problem Solver</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-right">
+              <div class="badge-icon"><i class="fa-brands fa-react"></i></div>
+              <div class="badge-text">
+                <span class="badge-label" data-i18n="badge_depi_title">DEPI React.js Trainee</span>
+                <span class="badge-desc" data-i18n="badge_depi_sub">Ministry of Comm. & IT</span>
+              </div>
+            </div>
+
+            <!-- Overlapping decorative glass cards (matching screenshot style) -->
+            <div class="glass-plate plate-1"></div>
+            <div class="glass-plate plate-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 01: SERVICES (Picture 2) -->
+    <section class="section-block" id="services">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-badge-wrapper">
+            <span class="section-number">01</span>
+            <div class="section-line"></div>
+            <span class="section-category" data-i18n="sec1_category">SERVICES</span>
+          </div>
+          <h2 class="section-title" data-i18n="sec1_title">Engineering Solutions Built Around Business & Functional Goals</h2>
+          <p class="section-subtitle" data-i18n="sec1_subtitle">
+            Strong digital work does not start with tools. It starts with understanding what the system actually needs, then building the right solution with clarity and precision.
+          </p>
+        </div>
+
+        <!-- Services 4 Cards Grid -->
+        <div class="cards-grid-2x2">
+          <!-- Card 1 -->
+          <div class="tech-card">
+            <div class="card-icon-box">
+              <i class="fa-solid fa-table-cells-large"></i>
+            </div>
+            <h3 class="card-title" data-i18n="service1_title">Modern React.js Web Applications</h3>
+            <p class="card-desc" data-i18n="service1_desc">
+              Building interactive, component-driven Single Page Applications (SPAs) with React.js. Implementing state management, modular JSX architecture, hooks, and clean code principles to create seamless user journeys.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="tech-card">
+            <div class="card-icon-box">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3 class="card-title" data-i18n="service2_title">Software & Algorithmic Engineering</h3>
+            <p class="card-desc" data-i18n="service2_desc">
+              Strong problem-solving foundation in C++, Python, and Java. Designing scalable solutions with optimal Data Structures & Algorithms (DSA), time-complexity optimizations, and Object-Oriented Programming (OOP).
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="tech-card">
+            <div class="card-icon-box">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h3 class="card-title" data-i18n="service3_title">Embedded Systems & Hardware IoT</h3>
+            <p class="card-desc" data-i18n="service3_desc">
+              Low-level microcontroller programming (Arduino / C++), real-time sensor interfacing, circuit diagnostics, and reliable wireless Bluetooth communication (HC-05/06) for robotic hardware and IoT prototypes.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="tech-card">
+            <div class="card-icon-box">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h3 class="card-title" data-i18n="service4_title">Performance, Database & Maintenance</h3>
+            <p class="card-desc" data-i18n="service4_desc">
+              Relational database design with SQL, query efficiency, responsive layout fixes, cross-browser compatibility, and code refactoring that keeps your codebase clean, fast, and easy to scale.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 02: PROJECTS (Picture 3) -->
+    <section class="section-block" id="projects">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-badge-wrapper">
+            <span class="section-number">02</span>
+            <div class="section-line"></div>
+            <span class="section-category" data-i18n="sec2_category">PROJECTS</span>
+          </div>
+          <h2 class="section-title" data-i18n="sec2_title">Real Projects Built Around Real Engineering Needs</h2>
+          <p class="section-subtitle" data-i18n="sec2_subtitle">
+            These projects are not presented as screenshots alone, but as structured work shaped to improve clarity, strengthen digital presence, and solve tangible engineering challenges.
+          </p>
+        </div>
+
+        <!-- Featured Project 1: Bluetooth Robotic Vehicle (Horizontal Hero Card) -->
+        <div class="featured-project-card">
+          <div class="featured-project-content">
+            <div class="project-badge-row">
+              <span class="badge-featured" data-i18n="proj_badge_featured">FEATURED</span>
+              <span class="badge-category" data-i18n="proj1_category">EMBEDDED SYSTEMS & ROBOTICS</span>
+            </div>
+
+            <h3 class="featured-title" data-i18n="proj1_title">Bluetooth-Controlled Four-Wheel Robotic Vehicle</h3>
+            <p class="featured-text" data-i18n="proj1_desc">
+              Engineered and programmed an autonomous 4-wheel robotic vehicle controlled remotely in real-time via a custom mobile application. Developed low-level microcontroller firmware in C++ for directional motor control, sensor integration, and reliable wireless Bluetooth communication (HC-05/06) with ultra-low latency.
+            </p>
+
+            <div class="featured-outcome">
+              <strong data-i18n="proj1_outcome_label">Outcome:</strong>
+              <span data-i18n="proj1_outcome_text">Awarded an Official Certificate of Appreciation & Honor by Thebes Higher Institute of Engineering for outstanding engineering competence in embedded programming and circuit integration.</span>
+            </div>
+
+            <!-- Tech Stack Pills -->
+            <div class="project-tags">
+              <span class="tag-pill">Arduino</span>
+              <span class="tag-pill">C++</span>
+              <span class="tag-pill">Bluetooth HC-05/06</span>
+              <span class="tag-pill">Motor Driver L298N</span>
+              <span class="tag-pill">Microcontrollers</span>
+              <span class="tag-pill">Sensors</span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="featured-actions">
+              <button type="button" class="btn-primary open-cert-btn" data-cert="robotics" data-i18n="btn_view_cert">
+                <i class="fa-solid fa-award"></i> View Official Certificate
+              </button>
+              <a href="#certificates" class="btn-secondary" data-i18n="btn_project_details">
+                <i class="fa-solid fa-arrow-down"></i> Details in Portfolio
+              </a>
+            </div>
+          </div>
+
+          <!-- Featured Project Visual Preview -->
+          <div class="featured-project-preview">
+            <div class="preview-card-inner">
+              <img src="cert-robotics.png" alt="Robotic Vehicle Certificate of Honor" class="preview-img" />
+              <div class="preview-badge-overlay">
+                <span class="overlay-tag"><i class="fa-solid fa-certificate"></i> Certified Engineering Distinction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Secondary Projects Grid -->
+        <div class="projects-subgrid">
+          <!-- Project 2: DEPI React.js Web Ecosystem -->
+          <div class="project-subcard">
+            <div class="subcard-header">
+              <span class="badge-category" data-i18n="proj2_category">FRONTEND WEB DEVELOPMENT</span>
+              <span class="project-date">2026 – Present</span>
+            </div>
+            <h3 class="subcard-title" data-i18n="proj2_title">Interactive React.js Web Applications (DEPI)</h3>
+            <p class="subcard-desc" data-i18n="proj2_desc">
+              Building responsive, high-performance Single Page Applications under the Digital Egypt Pioneers Initiative (Ministry of Communications and Information Technology). Implementing reusable component architecture, JSX, props, state hooks, and client-side routing.
+            </p>
+            <div class="project-tags">
+              <span class="tag-pill">React.js</span>
+              <span class="tag-pill">JavaScript (ES6+)</span>
+              <span class="tag-pill">HTML5</span>
+              <span class="tag-pill">CSS3</span>
+              <span class="tag-pill">Responsive Design</span>
+            </div>
+          </div>
+
+          <!-- Project 3: ECPC Competitive Programming Hub -->
+          <div class="project-subcard">
+            <div class="subcard-header">
+              <span class="badge-category" data-i18n="proj3_category">COMPETITIVE PROGRAMMING</span>
+              <span class="project-date">2026</span>
+            </div>
+            <h3 class="subcard-title" data-i18n="proj3_title">ECPC Algorithmic Problem Solving Suite</h3>
+            <p class="subcard-desc" data-i18n="proj3_desc">
+              Competed in collegiate rounds of the Egyptian Collegiate Programming Contest (ICPC), solving challenging algorithmic problems under strict time constraints. Applied advanced graph theory, dynamic programming, and data structure optimizations, achieving Rank 140.
+            </p>
+            <div class="project-tags">
+              <span class="tag-pill">C++</span>
+              <span class="tag-pill">Data Structures</span>
+              <span class="tag-pill">Algorithms (DSA)</span>
+              <span class="tag-pill">Time Complexity</span>
+              <span class="tag-pill">Problem Solving</span>
+            </div>
+          </div>
+
+          <!-- Project 4: Academic AI Research -->
+          <div class="project-subcard">
+            <div class="subcard-header">
+              <span class="badge-category" data-i18n="proj4_category">RESEARCH & ARTIFICIAL INTELLIGENCE</span>
+              <span class="project-date">2025</span>
+            </div>
+            <h3 class="subcard-title" data-i18n="proj4_title">AI in Mathematical Problem Solving</h3>
+            <p class="subcard-desc" data-i18n="proj4_desc">
+              Authored academic research paper analyzing artificial intelligence paradigms and their applications in solving complex mathematical models. Presented and recognized with a Certificate of Appreciation at Thebes Academy's Annual Scientific Conference.
+            </p>
+            <div class="project-tags">
+              <span class="tag-pill">Python</span>
+              <span class="tag-pill">AI Fundamentals</span>
+              <span class="tag-pill">Applied Mathematics</span>
+              <span class="tag-pill">Research Paper</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- DEDICATED SECTION: CERTIFICATES & RECOGNITIONS -->
+    <section class="section-block" id="certificates">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-badge-wrapper">
+            <span class="section-number"><i class="fa-solid fa-award"></i></span>
+            <div class="section-line"></div>
+            <span class="section-category" data-i18n="cert_category">VERIFIED CREDENTIALS & CERTIFICATIONS</span>
+          </div>
+          <h2 class="section-title" data-i18n="cert_title">Official Credentials, Awards & Recognitions</h2>
+          <p class="section-subtitle" data-i18n="cert_subtitle">
+            Authentic certificates earned through competitive programming, engineering project excellence, and scientific research. Click any certificate to inspect full resolution.
+          </p>
+        </div>
+
+        <!-- Certificates Grid -->
+        <div class="certificates-grid">
+          
+          <!-- Certificate 1: Robotics Engineering -->
+          <div class="cert-card" data-cert="robotics">
+            <div class="cert-thumbnail-wrapper">
+              <img src="cert-robotics.png" alt="Engineering Distinction: Bluetooth Robotic Vehicle" class="cert-thumb" />
+              <div class="cert-hover-mask">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span data-i18n="cert_click_inspect">Click to Inspect</span>
+              </div>
+            </div>
+            <div class="cert-info">
+              <div class="cert-meta">
+                <span class="cert-issuer">Thebes Higher Institute of Engineering</span>
+                <span class="cert-year">2026</span>
+              </div>
+              <h3 class="cert-title" data-i18n="cert1_name">Engineering Project Appreciation & Honor</h3>
+              <p class="cert-desc" data-i18n="cert1_text">
+                Awarded to Ahmed Hossam Sayed Mohamed for his distinction in delivering the "Bluetooth-Controlled Four-Wheel Robotic Vehicle", demonstrating high competence in embedded systems, circuit integration, and wireless control.
+              </p>
+              <button type="button" class="btn-cert-inspect open-cert-btn" data-cert="robotics">
+                <i class="fa-solid fa-expand"></i> <span data-i18n="btn_inspect">View Full Certificate</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Certificate 2: ICPC / ECPC Qualification -->
+          <div class="cert-card" data-cert="ecpc">
+            <div class="cert-thumbnail-wrapper">
+              <img src="cert-ecpc.png" alt="2026 ICPC ECPC Qualifications Certificate of Achievement" class="cert-thumb" />
+              <div class="cert-hover-mask">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span data-i18n="cert_click_inspect">Click to Inspect</span>
+              </div>
+            </div>
+            <div class="cert-info">
+              <div class="cert-meta">
+                <span class="cert-issuer">ICPC International Foundation</span>
+                <span class="cert-year">August 2026</span>
+              </div>
+              <h3 class="cert-title" data-i18n="cert2_name">ICPC / ECPC Qualification Achievement</h3>
+              <p class="cert-desc" data-i18n="cert2_text">
+                Official Certificate of Achievement for the 2026 ICPC ECPC Qualifications Collegiate Programming Contest Day 6, awarded to Ahmed Hossam Said ElGendy and team representing Thebes Higher Institute.
+              </p>
+              <button type="button" class="btn-cert-inspect open-cert-btn" data-cert="ecpc">
+                <i class="fa-solid fa-expand"></i> <span data-i18n="btn_inspect">View Full Certificate</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Certificate 3: Conference Appreciation -->
+          <div class="cert-card" data-cert="conference">
+            <div class="cert-thumbnail-wrapper">
+              <img src="cert-conference.png" alt="Thebes Academy Scientific Conference Appreciation" class="cert-thumb" />
+              <div class="cert-hover-mask">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span data-i18n="cert_click_inspect">Click to Inspect</span>
+              </div>
+            </div>
+            <div class="cert-info">
+              <div class="cert-meta">
+                <span class="cert-issuer">Thebes Academy Board of Directors</span>
+                <span class="cert-year">May 2025</span>
+              </div>
+              <h3 class="cert-title" data-i18n="cert3_name">Scientific Conference Organization & Research</h3>
+              <p class="cert-desc" data-i18n="cert3_text">
+                Certificate of Appreciation presented by Prof. Dr. Seddik Afifi for distinguished participation in organizing and managing the Second Student Scientific Conference "Research and Creative Activities".
+              </p>
+              <button type="button" class="btn-cert-inspect open-cert-btn" data-cert="conference">
+                <i class="fa-solid fa-expand"></i> <span data-i18n="btn_inspect">View Full Certificate</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Certificate 4: DEPI Ministry Program -->
+          <div class="cert-card cert-track-card">
+            <div class="cert-thumbnail-wrapper track-badge-visual">
+              <div class="track-icon-wrapper">
+                <i class="fa-brands fa-react"></i>
+              </div>
+              <span class="track-badge-pill">DEPI • MCIT EGYPT</span>
+            </div>
+            <div class="cert-info">
+              <div class="cert-meta">
+                <span class="cert-issuer">Ministry of Communications & IT (MCIT)</span>
+                <span class="cert-year">2026 – Present</span>
+              </div>
+              <h3 class="cert-title" data-i18n="cert4_name">Digital Egypt Pioneers Initiative (DEPI)</h3>
+              <p class="cert-desc" data-i18n="cert4_text">
+                Enrolled in the intensive nationwide React.js Frontend Web Development track, focusing on modern web architecture, state handling, reusable component hierarchies, and enterprise web standards.
+              </p>
+              <div class="verified-status">
+                <i class="fa-solid fa-circle-check"></i> <span data-i18n="cert_active_track">Active Professional Track</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 03: WHY ME (Picture 4) -->
+    <section class="section-block" id="why-me">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-badge-wrapper">
+            <span class="section-number">03</span>
+            <div class="section-line"></div>
+            <span class="section-category" data-i18n="sec3_category">WHY ME</span>
+          </div>
+          <h2 class="section-title" data-i18n="sec3_title">Why Clients & Engineering Teams Choose to Work With Me</h2>
+          <p class="section-subtitle" data-i18n="sec3_subtitle">
+            Strong execution is not only about visuals. It is about understanding the goal, communicating clearly, and paying attention to the details that make the final product more reliable and effective.
+          </p>
+        </div>
+
+        <!-- 4 Value Proposition Cards (Picture 4) -->
+        <div class="cards-grid-2x2">
+          <!-- Card 1 -->
+          <div class="tech-card">
+            <div class="card-icon-box checkmark-box">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="card-title" data-i18n="whyme1_title">Algorithmic & Problem-First Approach</h3>
+            <p class="card-desc" data-i18n="whyme1_desc">
+              I break down functional requirements and select the right data structures and algorithmic designs before jumping into syntax, eliminating bottlenecks early.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="tech-card">
+            <div class="card-icon-box checkmark-box">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="card-title" data-i18n="whyme2_title">Speed & Usability</h3>
+            <p class="card-desc" data-i18n="whyme2_desc">
+              I focus on clarity, execution speed, clean responsive layouts, and intuitive user experiences across desktop, tablet, and mobile devices.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="tech-card">
+            <div class="card-icon-box checkmark-box">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="card-title" data-i18n="whyme3_title">Scalable Component Architecture</h3>
+            <p class="card-desc" data-i18n="whyme3_desc">
+              I build with modular structure and reusable components that make future enhancements, maintenance, and teamwork significantly easier.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="tech-card">
+            <div class="card-icon-box checkmark-box">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="card-title" data-i18n="whyme4_title">Quality as a Foundation</h3>
+            <p class="card-desc" data-i18n="whyme4_desc">
+              I treat performance, clean code, and edge-case handling as core baseline standards, reinforced by competitive programming discipline under pressure.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 04: SKILLS (Picture 5) -->
+    <section class="section-block" id="skills">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-badge-wrapper">
+            <span class="section-number">04</span>
+            <div class="section-line"></div>
+            <span class="section-category" data-i18n="sec4_category">SKILLS</span>
+          </div>
+          <h2 class="section-title" data-i18n="sec4_title">The technologies I use to build reliable digital products.</h2>
+          <p class="section-subtitle" data-i18n="sec4_subtitle">
+            A focused stack that supports stable, fast, and scalable web solutions and software applications.
+          </p>
+        </div>
+
+        <!-- 4 Categorized Skill Cards (Picture 5) -->
+        <div class="cards-grid-2x2">
+          <!-- Card 1: Frontend -->
+          <div class="tech-card skills-card">
+            <h3 class="card-title" data-i18n="skill_group1_title">Frontend Development</h3>
+            <div class="pills-container">
+              <span class="skill-pill">React.js</span>
+              <span class="skill-pill">JavaScript (ES6+)</span>
+              <span class="skill-pill">HTML5</span>
+              <span class="skill-pill">CSS3</span>
+              <span class="skill-pill">JSX & Components</span>
+              <span class="skill-pill">State & Hooks</span>
+              <span class="skill-pill">Responsive Design</span>
+              <span class="skill-pill">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Programming & CS Core -->
+          <div class="tech-card skills-card">
+            <h3 class="card-title" data-i18n="skill_group2_title">Core CS & Programming</h3>
+            <div class="pills-container">
+              <span class="skill-pill">C++</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">Data Structures (DSA)</span>
+              <span class="skill-pill">Algorithms</span>
+              <span class="skill-pill">OOP</span>
+              <span class="skill-pill">Competitive Programming</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Hardware & Embedded -->
+          <div class="tech-card skills-card">
+            <h3 class="card-title" data-i18n="skill_group3_title">Hardware & Embedded Systems</h3>
+            <div class="pills-container">
+              <span class="skill-pill">Microcontrollers</span>
+              <span class="skill-pill">Arduino</span>
+              <span class="skill-pill">C/C++ Firmware</span>
+              <span class="skill-pill">Bluetooth HC-05/06</span>
+              <span class="skill-pill">Sensor Interfacing</span>
+              <span class="skill-pill">Motor Drivers</span>
+              <span class="skill-pill">Circuit Troubleshooting</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Tooling / Workflow -->
+          <div class="tech-card skills-card">
+            <h3 class="card-title" data-i18n="skill_group4_title">Tooling / Workflow</h3>
+            <div class="pills-container">
+              <span class="skill-pill">Git</span>
+              <span class="skill-pill">GitHub</span>
+              <span class="skill-pill">VS Code</span>
+              <span class="skill-pill">Database Fundamentals</span>
+              <span class="skill-pill">Clean Code</span>
+              <span class="skill-pill">Component Architecture</span>
+              <span class="skill-pill">Problem Solving</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 05: TESTIMONIALS / HONORS (Picture 6) -->
+    <section class="section-block" id="testimonials">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-badge-wrapper">
+            <span class="section-number">05</span>
+            <div class="section-line"></div>
+            <span class="section-category" data-i18n="sec5_category">TESTIMONIALS & HONORS</span>
+          </div>
+          <h2 class="section-title" data-i18n="sec5_title">Real feedback from mentors & collaborators.</h2>
+          <p class="section-subtitle" data-i18n="sec5_subtitle">
+            Academic recognition and peer feedback tied to real published achievements, competitive trials, and engineering deliveries.
+          </p>
+        </div>
+
+        <!-- 3 Testimonial Cards (Picture 6) -->
+        <div class="testimonials-grid">
+          <!-- Review 1 -->
+          <div class="tech-card testimonial-card">
+            <div class="testimonial-header">
+              <div class="stars-row">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="quote-mark">“</div>
+            </div>
+            <p class="testimonial-text" data-i18n="test1_text">
+              "Ahmed demonstrated high technical competence and innovation in his engineering project, delivering the Bluetooth-controlled robotic vehicle with remarkable firmware reliability, motor synchronization, and circuit stability."
+            </p>
+            <div class="testimonial-author">
+              <strong class="author-name" data-i18n="test1_author">Thebes Higher Institute of Engineering</strong>
+              <span class="author-role" data-i18n="test1_role">Academic Project Evaluation Board</span>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="tech-card testimonial-card">
+            <div class="testimonial-header">
+              <div class="stars-row">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="quote-mark">“</div>
+            </div>
+            <p class="testimonial-text" data-i18n="test2_text">
+              "Competing alongside Ahmed in the ICPC ECPC qualifications was a powerful experience. His speed in identifying optimal data structures and debugging complex edge cases under severe time limits made a decisive difference."
+            </p>
+            <div class="testimonial-author">
+              <strong class="author-name" data-i18n="test2_author">ECPC Collegiate Team</strong>
+              <span class="author-role" data-i18n="test2_role">Competitive Programming Contestants</span>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="tech-card testimonial-card">
+            <div class="testimonial-header">
+              <div class="stars-row">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="quote-mark">“</div>
+            </div>
+            <p class="testimonial-text" data-i18n="test3_text">
+              "Presented with a Certificate of Appreciation for his active and exemplary organization in the Second Student Scientific Conference. His commitment, discipline, and research contribution on AI were truly commendable."
+            </p>
+            <div class="testimonial-author">
+              <strong class="author-name" data-i18n="test3_author">Scientific Conference Board</strong>
+              <span class="author-role" data-i18n="test3_role">Thebes Academy Higher Administration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 06: FAQ (Picture 7) -->
+    <section class="section-block" id="faq">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-badge-wrapper">
+            <span class="section-number">06</span>
+            <div class="section-line"></div>
+            <span class="section-category" data-i18n="sec6_category">FAQ</span>
+          </div>
+          <h2 class="section-title" data-i18n="sec6_title">Everything you may want to know before working together.</h2>
+          <p class="section-subtitle" data-i18n="sec6_subtitle">
+            Short answers to the questions clients, engineering leads, and recruiters usually ask.
+          </p>
+        </div>
+
+        <!-- FAQ Accordion List (Picture 7) -->
+        <div class="faq-accordion-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq1_q">What opportunities or roles are you currently looking for?</span>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-xmark"></i></span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq1_a">
+                I am looking for Junior Frontend Developer (React.js), Software Engineer Intern, and C++ / Embedded Systems roles. I am available for internships, part-time positions, and freelance software projects with both local and international teams.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq2_q">What is your current academic status and location?</span>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq2_a">
+                I am currently a third-year Computer Science student at Thebes Academy in Cairo/Giza, Egypt (graduating 2028), maintaining an academic GPA of 3.0+.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq3_q">What technologies do you use for web development?</span>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq3_a">
+                I specialize in React.js, modern JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, component modularization, state management hooks, and REST API integration learned through intensive hands-on training at the Digital Egypt Pioneers Initiative (DEPI).
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq4_q">How does your competitive programming background benefit projects?</span>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq4_a">
+                Having competed in the ECPC (ICPC qualification), I analyze problems mathematically, select optimal algorithms and data structures, minimize time/space complexity, and test thoroughly for edge cases to ensure bug-free, high-speed execution.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq5_q">Can you work on embedded systems and hardware projects?</span>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq5_a">
+                Yes! I have hands-on experience programming microcontrollers (Arduino) using C++, integrating motor drivers (L298N), configuring HC-05/06 Bluetooth modules, and reading environmental sensors for real-time robotic systems.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq6_q">Are you comfortable collaborating in English?</span>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq6_a">
+                Yes. I have intermediate to upper-intermediate English proficiency (B2+) alongside native Arabic, making it easy to participate in international code reviews, documentation, and agile team communication.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 07: CONTACT (Picture 8) -->
+    <section class="section-block" id="contact">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-badge-wrapper">
+            <span class="section-number">07</span>
+            <div class="section-line"></div>
+            <span class="section-category" data-i18n="sec7_category">CONTACT</span>
+          </div>
+          <h2 class="section-title" data-i18n="sec7_title">Have a Project That Needs Stronger Execution?</h2>
+          <p class="section-subtitle" data-i18n="sec7_subtitle">
+            If you are looking for a dedicated software developer or frontend engineer who brings algorithmic rigor and clean code to your team, let's start the conversation.
+          </p>
+        </div>
+
+        <!-- Contact Two-Column Layout (Picture 8) -->
+        <div class="contact-grid">
+          <!-- Left Column: Direct Channels -->
+          <div class="contact-channels-card">
+            <h3 class="channels-title" data-i18n="contact_channels_title">Send Your Project Details</h3>
+
+            <div class="channel-items-list">
+              <!-- WhatsApp -->
+              <a href="https://wa.me/201095273058" target="_blank" rel="noopener noreferrer" class="channel-item">
+                <div class="channel-icon-box">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-type" data-i18n="channel_whatsapp">WHATSAPP</span>
+                  <span class="channel-val">01095273058</span>
+                </div>
+                <div class="channel-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+              </a>
+
+              <!-- Email -->
+              <a href="mailto:kingahmedhos@email.com" class="channel-item">
+                <div class="channel-icon-box">
+                  <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-type" data-i18n="channel_email">EMAIL</span>
+                  <span class="channel-val">kingahmedhos@email.com</span>
+                </div>
+                <div class="channel-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com/in/ahmed-hossam-a5537b385" target="_blank" rel="noopener noreferrer" class="channel-item">
+                <div class="channel-icon-box">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-type" data-i18n="channel_linkedin">LINKEDIN</span>
+                  <span class="channel-val">ahmed-hossam-a5537b385</span>
+                </div>
+                <div class="channel-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+              </a>
+
+              <!-- Location / City -->
+              <div class="channel-item">
+                <div class="channel-icon-box">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-type" data-i18n="channel_location">LOCATION</span>
+                  <span class="channel-val" data-i18n="channel_location_val">Giza / Cairo, Egypt</span>
+                </div>
+                <div class="channel-arrow"><i class="fa-solid fa-check"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Inquiry Form -->
+          <div class="contact-form-card">
+            <form id="contactForm" class="inquiry-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="formName" data-i18n="form_name">Name *</label>
+                  <input type="text" id="formName" name="name" placeholder="e.g. Ahmed Hossam" required />
+                </div>
+                <div class="form-group">
+                  <label for="formEmail" data-i18n="form_email">Email *</label>
+                  <input type="email" id="formEmail" name="email" placeholder="e.g. name@company.com" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="formPhone" data-i18n="form_phone">WhatsApp or Phone</label>
+                  <input type="tel" id="formPhone" name="phone" placeholder="+20 109 527 3058" />
+                </div>
+                <div class="form-group">
+                  <label for="formProject" data-i18n="form_project_type">Project Type *</label>
+                  <select id="formProject" name="project_type" required>
+                    <option value="" disabled selected data-i18n="opt_select">Select project type...</option>
+                    <option value="Frontend Web App" data-i18n="opt_frontend">Frontend / React Web App</option>
+                    <option value="Software / Algorithm" data-i18n="opt_software">Software & Algorithmic Logic</option>
+                    <option value="Embedded / Arduino" data-i18n="opt_embedded">Embedded / IoT Project</option>
+                    <option value="Job / Internship" data-i18n="opt_job">Job / Internship Opportunity</option>
+                    <option value="Other" data-i18n="opt_other">Other Collaboration</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="formDetails" data-i18n="form_details">Project Details *</label>
+                <textarea id="formDetails" name="message" rows="5" placeholder="Tell me about your project, goals, or role..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit" id="submitBtn">
+                <span data-i18n="btn_send_inquiry">Send Inquiry</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+
+              <div class="form-feedback" id="formFeedback"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p class="footer-copy" data-i18n="footer_copy">
+        Designed with care. Built to last. © 2026 AHMED HOSSAM SAYED MOHAMED. All Rights Reserved.
+      </p>
+      <div class="footer-links">
+        <a href="#hero" data-i18n="footer_back_top">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CERTIFICATE LIGHTBOX MODAL -->
+  <div class="cert-modal-backdrop" id="certModal">
+    <div class="cert-modal-dialog">
+      <button type="button" class="cert-modal-close" id="certModalClose" aria-label="Close modal">&times;</button>
+      <div class="cert-modal-content">
+        <div class="cert-modal-image-wrapper">
+          <img src="" alt="Full Certificate View" id="modalCertImg" class="modal-cert-image" />
+        </div>
+        <div class="cert-modal-details">
+          <h3 id="modalCertTitle" class="modal-title">Certificate Title</h3>
+          <p id="modalCertDesc" class="modal-desc">Certificate Description</p>
+          <div class="modal-actions">
+            <a href="#" id="modalDownloadBtn" download class="btn-primary">
+              <i class="fa-solid fa-download"></i> <span data-i18n="btn_download_image">Download Image</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
